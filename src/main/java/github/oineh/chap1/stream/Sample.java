@@ -35,6 +35,7 @@ public class Sample {
         }
 
         public Currency getCurrency() {
+            return null;
         }
     }
 }
