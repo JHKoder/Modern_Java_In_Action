@@ -1,6 +1,5 @@
 package github.oineh.part1.chap3.AgrounPattern;
 
-import github.oineh.chap3.AgrounPattern.BufferReaderProcessor;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

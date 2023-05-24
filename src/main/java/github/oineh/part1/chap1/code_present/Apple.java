@@ -1,18 +1,18 @@
 package github.oineh.part1.chap1.code_present;
 
-import github.oineh.chap1.code_present.Type;
+
+import github.oineh.part1.chap3.Predicate.Predicate;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
-import static github.oineh.chap1.code_present.Type.GREEN;
+import static github.oineh.part1.chap1.code_present.Type.GREEN;
 
 public class Apple {
-    private final github.oineh.chap1.code_present.Type color;
+    private final Type color;
     private final int weight;
 
-    public Apple(github.oineh.chap1.code_present.Type color, int weight) {
+    public Apple(Type color, int weight) {
         this.color = color;
         this.weight = weight;
     }

@@ -1,7 +1,5 @@
 package github.oineh.part1.chap3.Consumer;
 
-import github.oineh.chap3.Consumer.Consumer;
-
 import java.util.Arrays;
 import java.util.List;
 

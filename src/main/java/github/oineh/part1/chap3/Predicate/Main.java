@@ -1,6 +1,5 @@
 package github.oineh.part1.chap3.Predicate;
 
-import github.oineh.chap3.Predicate.Predicate;
 
 import java.util.ArrayList;
 import java.util.List;

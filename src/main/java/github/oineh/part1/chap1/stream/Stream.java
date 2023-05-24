@@ -1,7 +1,7 @@
 package github.oineh.part1.chap1.stream;
 
-import github.oineh.chap1.code_present.Apple;
-import github.oineh.chap1.code_present.Type;
+import github.oineh.part1.chap1.code_present.Apple;
+import github.oineh.part1.chap1.code_present.Type;
 
 import java.util.List;
 import java.util.stream.Collectors;
