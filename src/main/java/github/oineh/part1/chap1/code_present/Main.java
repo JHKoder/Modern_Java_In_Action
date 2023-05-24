@@ -1,12 +1,12 @@
 package github.oineh.part1.chap1.code_present;
 
-import github.oineh.chap1.code_present.Apple;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static github.oineh.chap1.code_present.Type.GREEN;
-import static github.oineh.chap1.code_present.Type.RED;
+import static github.oineh.part1.chap1.code_present.Type.GREEN;
+import static github.oineh.part1.chap1.code_present.Type.RED;
+
 
 public class Main {
     public static void main(String[] args) {
