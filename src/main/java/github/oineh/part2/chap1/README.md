@@ -301,3 +301,32 @@ intstream.count()  // : 50
 stream.filter(b -> Math.sqrt(a*a + b*b) % 1 == 0)
 .map( b -> new int[]{a,b ,(int) Math.sqrt(a*a + b*b)});
 
+
+##### 자바 9에서는 null이 될 수 있는 객체로 스트림을 만들수 있습니다.
+
+만약 System.getProperty 에서 키에 대응하는 속성이 없으면 null을 반환 합니다.
+보통 삼향연산자,메소드 로 분리하는데 
+
+자바9 부터는 아래처럼 만들 수 있다. <br>
+Stream<String> stream = streams.ofNullable(System.getProperty("Home"));
+
+Stream<String> values = Stream.of("config","home","user")
+.flatMap(key -> Stream.ofNullable(System.getProperty(key)));
+
+
+
+## 파일로 스트림 만들기 
+
+파일을 처리하는 동의 I/O 연산에 사용하는 자바의 NIO API(비블록 I/O)도 스트림을 사용할 수 있다
+
+```java
+try(Stream<String> lines = Files.lines(Path.get("data.txt"),
+        Charset.defaultCharset())){
+            long uniqueWords = lines.flatMap(line -> Arrays.stream(line.split(" ")))
+                .distinct()
+                .count();
+}catch(IOException e){}
+
+
+```
+
