@@ -78,3 +78,25 @@ class Sample {
 - 즉 자유로움을 의미한다.
 
 ## 그룹화 
+
+정수 n을 인수로 받아서 2에서 n까지의 자연수를 소수와 비소수로 나눔
+```java
+    public boolean isPrime(int candidate){
+        return IntStream.range(2,candidate)
+        .noneMatch(i -> candidate % i == 0 );
+    }
+```
+
+제곱근 이하의 수로 제한
+```java
+    public boolean isPrime(int candidate){
+         int canroot = (int) Math.sqrt((double)candidate);
+         reurn IntStream.rangeClose(2,candidateRoot)
+        .noneMatch(i -> candidate % i == 0 );
+    }
+```
+
+![](img/스크린샷 2023-05-30 오후 7.14.53.png)
+
+![](img/스크린샷 2023-05-30 오후 7.15.16.png)
+
