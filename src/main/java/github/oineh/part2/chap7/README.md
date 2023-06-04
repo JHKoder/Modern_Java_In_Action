@@ -44,3 +44,32 @@ System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism","12");
 
 org.openjdk.jmh:jmh-core:1.17.4
 org.openjdk.jmh:jmh-generator-annprocess:1.17.4
+
+> 어노테이션 프로세서 
+
+```maven
+<plugin><id>org.apache.maven.plugins
+<execution>
+<configuration>
+<finalName> benchmarks
+<transformats>
+<implementation = "org.apache.maven.plugins.shade.resource.ManifestResourceTransformat">
+<mainClass>org.openjdk.jmh.Main
+```
+
+```java
+@BenchmarkMode(Mode.AverageTime)   //벤치마크 대상 메서드를 싱행하는데 걸린 평균 시간 측정
+@OutputTimeUnit(TimeUnit.MiLLISECONDS) // 결과를 밀리초 단위로 출력
+@FORK(2,jvmArgs={"-Xms4G","-Xmx4G"})// 4Gb의 힙 공간을 제공한 환경에서 두번 수행 
+class A{
+    @Benchmark // 벤치마크 대상 
+    public long test(){
+        
+    }
+    
+    @TearDown(Level.Invocation) // 매 번 벤치마크를 실행한 다음에 가비지 컬레터 동작 시도 
+    public void down(){
+        System.gc();
+    }
+}
+```
